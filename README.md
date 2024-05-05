@@ -2,6 +2,7 @@
 Author- Saptarshi Jana
 # Tutorals
 PS G:\Git_local\GitDemo> git status
+<br>
 >> On branch main---Nothing to commit
 >> no changes added to commit (use "git add" and/or "git commit -a")
 >> Untracked files:
