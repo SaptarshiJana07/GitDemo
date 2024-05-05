@@ -19,6 +19,7 @@ Changes not staged for commit:
   (Sol: use "git commit -a <some_message>" to record changes in working directory)
 # to stage the final change in the local repo (all together)
 >> PS G:\Git_local\GitDemo> git add .
+check "git status"-- all stagged files will turn into green
 # to save the final change in the local repo
 >> PS G:\Git_local\GitDemo> git commit -m "new file added"
 # to push is to the Github cloud from local drive: remote repo is named as "origin" here.
