@@ -38,3 +38,6 @@ check "git status"-- all stagged files will turn into green
 <br>git merge [branch]
 <br> show all commits in the current branch’s history
 <br>git log
+<br>create branch: git branch -b person1
+<br>delete branch: git branch -d person1 (after checking out from that branch)
+<br>create branch: git branch -b person1
