@@ -28,4 +28,13 @@ check "git status"-- all stagged files will turn into green
 >> PS G:\Git_local\GitDemo> git commit -m "new file added"
 # to push is to the Github cloud from local drive: remote repo is named as "origin" here.
 >> PS G:\Git_local\GitDemo> git push origin main
-
+# list your branches. a * will appear next to the currently active branch
+<br>git branch
+<br> create a new branch at the current commit
+<br>git branch [branch-name]
+<br> switch to another branch and check it out into your working directory
+<br>git checkout
+<br> merge the specified branch’s history into the current one
+<br>git merge [branch]
+<br> show all commits in the current branch’s history
+<br>git log
