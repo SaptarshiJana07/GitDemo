@@ -1,6 +1,10 @@
 # GitDemo
 Author- Saptarshi Jana
 # Tutoral
+# Workflow of Git in a Local Repo
+Create a GitHub repo >> clone it with the local folder {PS G:\Git_local\GitDemo> git clone https://github.com/SaptarshiJana07/GitDemo.git} >> make changes >> Add all changes {PS G:\Git_local\GitDemo> git add .} >> Commit them with message {PS G:\Git_local\GitDemo> git commit -m "message"} >> Push it to the GitHub {PS G:\Git_local\GitDemo> git push -u oginin main} >> If you have made some changes at remote repo the sync it with local repo{PS G:\Git_local\GitDemo> git pull oginin main}
+<br> check the remote repo>> {git remote -v}
+
 # to know the file status
 >> PS G:\Git_local\GitDemo> git status
 == 1. Untracked 2. modified 3. Stagged 4. Unmodified
@@ -24,3 +28,4 @@ check "git status"-- all stagged files will turn into green
 >> PS G:\Git_local\GitDemo> git commit -m "new file added"
 # to push is to the Github cloud from local drive: remote repo is named as "origin" here.
 >> PS G:\Git_local\GitDemo> git push origin main
+
