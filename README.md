@@ -6,7 +6,7 @@ Create a GitHub repo >> clone it with the local folder {PS G:\Git_local\GitDemo>
 <br> check the remote repo>> {git remote -v}
 
 # to know the file status
->> PS G:\Git_local\GitDemo> git status
+>> PS G:\Git_local\GitDemo> ```bash git status```
 == 1. Untracked 2. modified 3. Stagged 4. Unmodified
 <br> Output: "On branch main
 Your branch is up to date with 'origin/main'.
