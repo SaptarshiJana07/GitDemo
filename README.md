@@ -21,13 +21,19 @@ Changes not staged for commit:
   (Sol: use "git restore <file>..." to discard changes in working directory)
   
   (Sol: use "git commit -a <some_message>" to record changes in working directory)
+
+# see all files inside local repo $ initiate a git bash
+All files: '''Get-ChildItem -Force''', Only Hidden: '''Get-ChildItem -Force -Hidden'''
+<br> show files: '''ls {any one of cmd}''' cmd: -Attributes, -Directory, -File, -Hidden, -ReadOnly,    
+-System.
 # to stage the final change in the local repo (all together)
->> PS G:\Git_local\GitDemo> git add .
+>> PS G:\Git_local\GitDemo> '''git add .'''
 check "git status"-- all stagged files will turn into green
 # to save the final change in the local repo
->> PS G:\Git_local\GitDemo> git commit -m "new file added"
+>> PS G:\Git_local\GitDemo> '''git commit -m "new file added"'''
 # to push is to the Github cloud from local drive: remote repo is named as "origin" here.
 >> PS G:\Git_local\GitDemo> git push origin main
+<br> >> PS G:\Git_local\GitDemo> '''git push origin branch1''' (in case of updating in the branch1 repo not the main)
 # list your branches. a * will appear next to the currently active branch
 <br>git branch
 <br> create a new branch at the current commit
