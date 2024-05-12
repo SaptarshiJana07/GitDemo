@@ -1,6 +1,11 @@
 # GitDemo
 Author- Saptarshi Jana
 # Tutoral
+# Installing GitBash >> open it to configure
+<br>  git config --global user.name "SaptarshiJana07"
+<br>  git config --global user.email "mesaptarshi.jana@gmail.com"
+<br>  git config --list
+
 # see all files inside local repo $ initiate a git bash
 All files: ```Get-ChildItem -Force```, Only Hidden: ```Get-ChildItem -Force -Hidden```
 <br> show files: ```ls {any one of cmd}``` cmd: -Attributes, -Directory, -File, -Hidden, -ReadOnly,    
