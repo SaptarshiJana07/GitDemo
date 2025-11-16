@@ -1,58 +1,170 @@
-# GitDemo
-Author- Saptarshi Jana
-# Tutoral
-# Installing GitBash >> open it to configure
-<br>  git config --global user.name "SaptarshiJana07"
-<br>  git config --global user.email "mesaptarshi.jana@gmail.com"
-<br>  git config --list
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitDemo - README</title>
+    <meta charset="UTF-8">
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6;">
 
-# see all files inside local repo $ initiate a git bash
-All files: ```Get-ChildItem -Force```, Only Hidden: ```Get-ChildItem -Force -Hidden```
-<br> show files: ```ls {any one of cmd}``` cmd: -Attributes, -Directory, -File, -Hidden, -ReadOnly,    
--System.
-<br> Initiate git in the local repo: ```git init```
-<br> clone the remote repo in local folder: ```git clone https://github.com/SaptarshiJana07/GitDemo.git```
-# Workflow of Git in a Local Repo
-Create a GitHub repo >> clone it with the local folder {PS G:\Git_local\GitDemo> ```git clone https://github.com/SaptarshiJana07/GitDemo.git```} >> make changes >> Add all changes {PS G:\Git_local\GitDemo> ```git add .```} >> Commit them with message {PS G:\Git_local\GitDemo> ```git commit -m "message"```} >> Push it to the GitHub {PS G:\Git_local\GitDemo> ```git push -u oginin main```} >> If you have made some changes at remote repo the sync it with local repo{PS G:\Git_local\GitDemo> ```git pull oginin main```}
-<br> check the remote repo>> {```git remote -v```}
+<h1>GitDemo</h1>
+<p><strong>Author:</strong> Saptarshi Jana</p>
 
-# to know the file status
->> PS G:\Git_local\GitDemo> ```git status```
-== 1. Untracked 2. modified 3. Stagged 4. Unmodified
-<br> Output: "On branch main
+<hr>
+
+<h2>1. Introduction</h2>
+<p>This repository contains basic Git commands and workflow examples for beginners using Git Bash and PowerShell.</p>
+
+<hr>
+
+<h2>2. Git Installation & Initial Configuration</h2>
+<p>After installing <strong>Git Bash</strong>, configure your identity:</p>
+
+<pre>
+git config --global user.name "SaptarshiJana07"
+git config --global user.email "mesaptarshi.jana@gmail.com"
+git config --list
+</pre>
+
+<hr>
+
+<h2>3. Viewing Files in Local Repository</h2>
+
+<p><strong>PowerShell Commands:</strong></p>
+<ul>
+    <li>View all files: <code>Get-ChildItem -Force</code></li>
+    <li>View only hidden files: <code>Get-ChildItem -Force -Hidden</code></li>
+</ul>
+
+<p><strong>Git Bash command to show files:</strong></p>
+<pre>ls [-Attributes | -Directory | -File | -Hidden | -ReadOnly | -System]</pre>
+
+<p><strong>Initialize Git in a folder:</strong></p>
+<pre>git init</pre>
+
+<p><strong>Clone a remote GitHub repository:</strong></p>
+<pre>git clone https://github.com/SaptarshiJana07/GitDemo.git</pre>
+
+<hr>
+
+<h2>4. Git Workflow (Local to Remote)</h2>
+
+<ol>
+    <li>Create a GitHub repository</li>
+    <li>Clone it into your local folder:
+        <pre>git clone https://github.com/SaptarshiJana07/GitDemo.git</pre>
+    </li>
+    <li>Make changes to files</li>
+    <li>Stage changes:
+        <pre>git add .</pre>
+    </li>
+    <li>Commit changes:
+        <pre>git commit -m "message"</pre>
+    </li>
+    <li>Push to GitHub:
+        <pre>git push -u origin main</pre>
+    </li>
+    <li>Pull updates from remote (if changed online):
+        <pre>git pull origin main</pre>
+    </li>
+</ol>
+
+<p><strong>Check remote repository:</strong></p>
+<pre>git remote -v</pre>
+
+<hr>
+
+<h2>5. Checking File Status</h2>
+
+<p>Use:</p>
+<pre>git status</pre>
+
+<p><strong>Possible File States:</strong></p>
+<ul>
+    <li>Untracked</li>
+    <li>Modified</li>
+    <li>Staged</li>
+    <li>Unmodified</li>
+</ul>
+
+<p><strong>Typical Outputs:</strong></p>
+<pre>
+On branch main
 Your branch is up to date with 'origin/main'.
-othing to commit, working tree clean"
-<br> or 
-On branch main---Nothing to commit
-Changes not staged for commit: 
- modified:   README.md
-  (Sol: use 1. "git add" and/or 2. "git commit -a")
-  
-  (Sol: use "git add <file>..." to stage (include/update) the changes, what will be committed)
-  (Sol: use "git restore <file>..." to discard changes in working directory)
-  
-  (Sol: use "git commit -a <some_message>" to record changes in working directory)
+Nothing to commit, working tree clean
+</pre>
 
-# to stage the final change in the local repo (all together)
->> PS G:\Git_local\GitDemo> ```git add .```
-check "git status"-- all stagged files will turn into green
+<p>Or:</p>
+<pre>
+On branch main
+Changes not staged for commit:
+    modified: README.md
+</pre>
 
-# to save the final change in the local repo
->> PS G:\Git_local\GitDemo> ```git commit -m "new file added"```
+<p><strong>Solutions:</strong></p>
+<ul>
+    <li>Stage changes: <code>git add &lt;file&gt;</code></li>
+    <li>Discard changes: <code>git restore &lt;file&gt;</code></li>
+    <li>Commit tracked changes: <code>git commit -a -m "message"</code></li>
+</ul>
 
-# to push is to the Github cloud from local drive: remote repo is named as "origin" here.
->> PS G:\Git_local\GitDemo> ```git push origin main```
-<br> >> PS G:\Git_local\GitDemo> ```git push origin branch1``` (in case of updating in the branch1 repo not the main)
-# list your branches. a * will appear next to the currently active branch
-<br>```git branch```
-<br> create a new branch at the current commit
-<br>```git branch [branch-name]```
-<br> switch to another branch and check it out into your working directory
-<br>```git checkout```
-<br> merge the specified branch’s history into the current one
-<br>```git merge [branch]```
-<br> show all commits in the current branch’s history
-<br>```git log```
-<br>create branch: ```git branch -b person1```
-<br>delete branch: ```git branch -d person1``` (after checking out from that branch)
-<br>create branch: ```git branch -b person1```
+<hr>
+
+<h2>6. Staging & Saving Changes</h2>
+
+<p><strong>Stage all changes:</strong></p>
+<pre>git add .</pre>
+
+<p><strong>Commit to local repository:</strong></p>
+<pre>git commit -m "new file added"</pre>
+
+<hr>
+
+<h2>7. Pushing to GitHub</h2>
+
+<p><strong>Push to main branch:</strong></p>
+<pre>git push origin main</pre>
+
+<p><strong>Push to another branch (e.g., branch1):</strong></p>
+<pre>git push origin branch1</pre>
+
+<hr>
+
+<h2>8. Working with Branches</h2>
+
+<ul>
+    <li>List branches:
+        <pre>git branch</pre>
+    </li>
+
+    <li>Create a new branch:
+        <pre>git branch [branch-name]</pre>
+    </li>
+
+    <li>Create and switch to a new branch:
+        <pre>git checkout -b person1</pre>
+    </li>
+
+    <li>Switch to existing branch:
+        <pre>git checkout [branch-name]</pre>
+    </li>
+
+    <li>Merge a branch into the current branch:
+        <pre>git merge [branch]</pre>
+    </li>
+
+    <li>Delete a branch (after switching away from it):
+        <pre>git branch -d person1</pre>
+    </li>
+
+    <li>View commit history:
+        <pre>git log</pre>
+    </li>
+</ul>
+
+<hr>
+
+<h2>9. Summary</h2>
+<p>This README provides a simplified and structured guide to Git basics, including configuration, workflow, status checking, branching, and pushing/pulling updates. It is ideal for beginners using Git Bash or PowerShell.</p>
+
+</body>
+</html>
